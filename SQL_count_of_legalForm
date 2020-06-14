@@ -1,0 +1,12 @@
+SELECT
+	LegalFormID,
+	Count(DISTINCT Name) AS NameCount
+  
+FROM
+	Company
+  
+GROUP BY
+	LegalFormID
+  
+ORDER BY
+	NameCount DESC
