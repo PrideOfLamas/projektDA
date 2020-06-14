@@ -1,0 +1,9 @@
+SELECT TOP 10
+	BuyerCompanyIN,
+	SUM(ValueCZK)
+FROM
+	Contract
+GROUP BY
+	BuyerCompanyIN
+ORDER BY
+	SUM(ValueCZK) DESC
