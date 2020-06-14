@@ -1,9 +1,14 @@
-SELECT TOP 10
-	BuyerCompanyIN,
-	SUM(ValueCZK)
+SELECT 
+	Ct. BuyerCompanyIN,
+	Co.Name,
+	SUM(ct.ValueCZK) AS TotalValue
 FROM
-	Contract
+	Contract ct
+	JOIN Company co ON ct.BuyerCompanyIN = co.CompanyIN
 GROUP BY
-	BuyerCompanyIN
+	ct.BuyerCompanyIN,
+	co.Name
+
 ORDER BY
-	SUM(ValueCZK) DESC
+	TotalValue DESC
+
