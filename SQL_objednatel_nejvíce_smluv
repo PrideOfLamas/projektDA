@@ -1,4 +1,4 @@
-SELECT 
+SELECT TOP 10
 	co.Name,
   ct.BuyerCompanyIN,
 	COUNT(ct.Id) AS ConcludedContracts
