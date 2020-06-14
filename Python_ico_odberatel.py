@@ -1,7 +1,6 @@
 import sys
 import sqlite3
 import pandas as pd
-import matplotlib.pyplot as plt
 
 db = sqlite3.connect(sys.argv[1])
 c = db.cursor()
