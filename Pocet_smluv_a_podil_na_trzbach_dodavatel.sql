@@ -27,7 +27,7 @@ from Contract c
 join Company sup on sup.CompanyIN = c.SupplierCompanyIN
 LEFT join Company buy on buy.CompanyIN = c.BuyerCompanyIN
 join Soucty ON Soucty.SupplierCompanyIN = c.SupplierCompanyIN
-where sup.CompanyIN = "45309612"
+--where sup.CompanyIN = "45309612"
 
 GROUP BY
 	IČO_odběratele
